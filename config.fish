@@ -49,11 +49,9 @@ if test -f $_profile
                     echo "set -xg $var $value" >> $_cache
             end
         end
-        # Set cache mtime to match .profile so comparison works next time
         touch -r $_profile $_cache
-    else
-        source $_cache
     end
+    source $_cache
 end
 
 
